@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>788675381114-04urlk48s6eamhh5jooettnl825np0ff.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.788675381114-04urlk48s6eamhh5jooettnl825np0ff</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBnqrUaS6IgoB_Cn5pKDUWjCf2iRthMnWk</string>
+	<key>GCM_SENDER_ID</key>
+	<string>788675381114</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.viniciusgont.eped</string>
+	<key>PROJECT_ID</key>
+	<string>eped-32257</string>
+	<key>STORAGE_BUCKET</key>
+	<string>eped-32257.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:788675381114:ios:18af4a0552522a1e</string>
+	<key>DATABASE_URL</key>
+	<string>https://eped-32257.firebaseio.com</string>
+</dict>
+</plist>

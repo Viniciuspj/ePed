@@ -7,14 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24EAAD0A0753B1B0A913A34F /* Pods_ePed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 950673F6363A354A92E40671 /* Pods_ePed.framework */; };
 		EA61AC19202F680E00E01639 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA61AC18202F680E00E01639 /* AppDelegate.swift */; };
 		EA61AC1B202F680E00E01639 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA61AC1A202F680E00E01639 /* ViewController.swift */; };
 		EA61AC1E202F680E00E01639 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA61AC1C202F680E00E01639 /* Main.storyboard */; };
 		EA61AC20202F680E00E01639 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA61AC1F202F680E00E01639 /* Assets.xcassets */; };
 		EA61AC23202F680E00E01639 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA61AC21202F680E00E01639 /* LaunchScreen.storyboard */; };
+		EA61AC2B202F6A0800E01639 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA61AC2A202F6A0800E01639 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		29F610459F8238A1A37D532E /* Pods-ePed.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ePed.release.xcconfig"; path = "Pods/Target Support Files/Pods-ePed/Pods-ePed.release.xcconfig"; sourceTree = "<group>"; };
+		322CABCE60BEBDB1D3DEC037 /* Pods-ePed.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ePed.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ePed/Pods-ePed.debug.xcconfig"; sourceTree = "<group>"; };
+		950673F6363A354A92E40671 /* Pods_ePed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ePed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA61AC15202F680E00E01639 /* ePed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ePed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA61AC18202F680E00E01639 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA61AC1A202F680E00E01639 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +27,7 @@
 		EA61AC1F202F680E00E01639 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA61AC22202F680E00E01639 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA61AC24202F680E00E01639 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA61AC2A202F6A0800E01639 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24EAAD0A0753B1B0A913A34F /* Pods_ePed.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		83B6DDB7BAB379A2227CFD46 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				322CABCE60BEBDB1D3DEC037 /* Pods-ePed.debug.xcconfig */,
+				29F610459F8238A1A37D532E /* Pods-ePed.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D5565C7CFDC5F12FB9745459 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				950673F6363A354A92E40671 /* Pods_ePed.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EA61AC0C202F680E00E01639 = {
 			isa = PBXGroup;
 			children = (
 				EA61AC17202F680E00E01639 /* ePed */,
 				EA61AC16202F680E00E01639 /* Products */,
+				83B6DDB7BAB379A2227CFD46 /* Pods */,
+				D5565C7CFDC5F12FB9745459 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,6 +85,7 @@
 				EA61AC1C202F680E00E01639 /* Main.storyboard */,
 				EA61AC1F202F680E00E01639 /* Assets.xcassets */,
 				EA61AC21202F680E00E01639 /* LaunchScreen.storyboard */,
+				EA61AC2A202F6A0800E01639 /* GoogleService-Info.plist */,
 				EA61AC24202F680E00E01639 /* Info.plist */,
 			);
 			path = ePed;
@@ -71,9 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EA61AC27202F680E00E01639 /* Build configuration list for PBXNativeTarget "ePed" */;
 			buildPhases = (
+				8ED2C7B2A1790B0E63A44621 /* [CP] Check Pods Manifest.lock */,
 				EA61AC11202F680E00E01639 /* Sources */,
 				EA61AC12202F680E00E01639 /* Frameworks */,
 				EA61AC13202F680E00E01639 /* Resources */,
+				312AF96BBA46FACC67DB00D3 /* [CP] Embed Pods Frameworks */,
+				F90F72F5FF9A5A9CEA70D564 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -124,12 +154,69 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA61AC23202F680E00E01639 /* LaunchScreen.storyboard in Resources */,
+				EA61AC2B202F6A0800E01639 /* GoogleService-Info.plist in Resources */,
 				EA61AC20202F680E00E01639 /* Assets.xcassets in Resources */,
 				EA61AC1E202F680E00E01639 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		312AF96BBA46FACC67DB00D3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ePed/Pods-ePed-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ePed/Pods-ePed-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8ED2C7B2A1790B0E63A44621 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ePed-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F90F72F5FF9A5A9CEA70D564 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ePed/Pods-ePed-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EA61AC11202F680E00E01639 /* Sources */ = {
@@ -272,11 +359,13 @@
 		};
 		EA61AC28202F680E00E01639 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 322CABCE60BEBDB1D3DEC037 /* Pods-ePed.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DLAQ9K96RL;
 				INFOPLIST_FILE = ePed/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.viniciusgont.ePed;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -287,11 +376,13 @@
 		};
 		EA61AC29202F680E00E01639 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 29F610459F8238A1A37D532E /* Pods-ePed.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DLAQ9K96RL;
 				INFOPLIST_FILE = ePed/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.viniciusgont.ePed;
 				PRODUCT_NAME = "$(TARGET_NAME)";
