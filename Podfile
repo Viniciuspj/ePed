@@ -6,7 +6,14 @@ target 'ePed' do
   use_frameworks!
 
   # Pods for ePed
-  pod 'Firebase/Core'
+    pod 'Firebase/Core'
+
+    pod 'Bolts'
+    pod 'FBSDKCoreKit'
+    pod 'FBSDKShareKit'
+    pod 'FBSDKLoginKit'
+
+
 
 
 end

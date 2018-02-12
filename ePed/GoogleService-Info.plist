@@ -17,21 +17,21 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.viniciusgont.eped</string>
+	<string>com.viniciusgont.ePed</string>
 	<key>PROJECT_ID</key>
 	<string>eped-32257</string>
 	<key>STORAGE_BUCKET</key>
 	<string>eped-32257.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_ANALYTICS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_APPINVITE_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_GCM_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_SIGNIN_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>GOOGLE_APP_ID</key>
 	<string>1:788675381114:ios:18af4a0552522a1e</string>
 	<key>DATABASE_URL</key>
