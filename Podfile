@@ -7,13 +7,12 @@ target 'ePed' do
 
   # Pods for ePed
     pod 'Firebase/Core'
+    pod 'Firebase/Auth'
 
     pod 'Bolts'
     pod 'FBSDKCoreKit'
     pod 'FBSDKShareKit'
     pod 'FBSDKLoginKit'
 
-
-
-
+    pod 'GoogleSignIn'
 end
