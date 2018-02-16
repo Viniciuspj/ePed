@@ -11,10 +11,10 @@ import FBSDKLoginKit
 import Firebase
 import GoogleSignIn
 
-class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
+class LoginViewController: UIViewController, FBSDKLoginButtonDelegate, GIDSignInUIDelegate {
     
     let helper = Helper()
-    
+    //MARK: Layout
     let greenHeartImage: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "greenheart")
@@ -61,7 +61,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
 
     lazy var termsButton: UIButton = {
         let button = UIButton()
-        button.setTitleColor(helper.getGreenColor(), for: .normal)
+        button.setTitleColor(AppColors.green.getColor(), for: .normal)
         button.setTitle(helper.termsText, for: .normal)
         button.titleLabel!.textAlignment = .center
         button.titleLabel?.font = helper.getAppFont(fontSize: 18)
@@ -70,8 +70,11 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         prepareLayout()
+        
+        GIDSignIn.sharedInstance().uiDelegate = self
+        //GIDSignIn.sharedInstance().signIn()
     }
 
     func prepareLayout(){
@@ -100,6 +103,8 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
         fbLoginButton.anchor(top: appSubname.layoutMarginsGuide.bottomAnchor, leading: view.safeAreaLayoutGuide.leadingAnchor, bottom: nil, trailing: view.safeAreaLayoutGuide.trailingAnchor, padding: .init(top: 40, left: 5, bottom: 0, right: -5), size: .init(width: 0, height: 50))
         
         //Google Login
+        //GIDSignIn.sharedInstance().delegate = self
+        
         let googleButton = GIDSignInButton()
         view.addSubview(googleButton)
         
@@ -113,14 +118,15 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
         view.addSubview(termsButton)
        
         termsButton.anchor(top: nil, leading: view.safeAreaLayoutGuide.leadingAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, trailing: view.safeAreaLayoutGuide.trailingAnchor, padding: .init(top: 15, left: 5, bottom: 0, right: -5), size: .init(width: 0, height: 0))
-        
-        
+
     }
     
+    //MARK: Facebook Login
     func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
         print("logout from facebook")
     }
     
+    ///FB LoginButton
     func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
         
         if error != nil{
@@ -128,18 +134,33 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
             return
         }
         
-        print("success...")
-        
-        authWithFirebase()
-    }
-    
-    func authWithFirebase(){
+        print("fb success...")
         let accessToken = FBSDKAccessToken.current()
         
         guard let accessTokenString = accessToken?.tokenString else
         { return }
         
         let credentials = FacebookAuthProvider.credential(withAccessToken: accessTokenString)
+        authenticateWithFirebase(credentials)
+    }
+    
+    //MARK Google Login
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        print("Ok google")
+        
+        if let error = error {
+            print(error)
+            return
+        }
+        
+        guard let authentication = user.authentication else { return }
+        let credentials = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
+                                                       accessToken: authentication.accessToken)
+       
+        authenticateWithFirebase(credentials)
+    }
+    
+    func authenticateWithFirebase(_ credentials: AuthCredential){
         
         //Firebase login with fb user
         Auth.auth().signIn(with: credentials) { (user, error) in
@@ -158,10 +179,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
             }
             print(result ?? "")
         }
-   
     }
-    
-    
 }
 
 

@@ -8,12 +8,23 @@
 
 import UIKit
 
+enum AppColors{
+    case green
+    case red
+    
+    func getColor() -> UIColor{
+        switch self {
+        case .green:
+            return UIColor.init(red: 29/255, green: 216/255, blue: 138/255, alpha: 1)
+        case .red:
+            return UIColor.init(red: 29/255, green: 216/255, blue: 138/255, alpha: 1)
+        }
+    }
+}
+
 struct Helper{
     
-    func getGreenColor() -> UIColor{
-        return UIColor.init(red: 29/255, green: 216/255, blue: 138/255, alpha: 1)
-    }
-    
+    //App texts and strings
     let appNameText = "ePed"
     let appSubnameText = NSLocalizedString("Emergência Pediátrica", comment: "Emergência Pediátrica")
     let noUserText = NSLocalizedString("Entre sem registro", comment: "Entre sem logar")
