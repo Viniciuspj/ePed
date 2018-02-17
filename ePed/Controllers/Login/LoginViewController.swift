@@ -78,8 +78,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate, GIDSignIn
     }
 
     func prepareLayout(){
-        //view.backgroundColor = .red
-        
+        view.backgroundColor = .white
         view.addSubview(greenHeartImage)
         view.addSubview(appName)
         view.addSubview(appSubname)
@@ -128,7 +127,6 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate, GIDSignIn
     
     ///FB LoginButton
     func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
-        
         if error != nil{
             print(error)
             return
@@ -145,35 +143,22 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate, GIDSignIn
     }
     
     //MARK Google Login
-    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
-        print("Ok google")
-        
-        if let error = error {
-            print(error)
-            return
-        }
-        
-        guard let authentication = user.authentication else { return }
-        let credentials = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
-                                                       accessToken: authentication.accessToken)
-       
-        authenticateWithFirebase(credentials)
+    func sign(inWillDispatch signIn: GIDSignIn!, error: Error!) {
+        //Se estiver logado
+        print(signIn.currentUser)
     }
     
     func authenticateWithFirebase(_ credentials: AuthCredential){
-        
         //Firebase login with fb user
         Auth.auth().signIn(with: credentials) { (user, error) in
             if error != nil{
                 print("Error:", error ?? "")
                 return
             }
-            
             print("User ok:", user ?? "")
         }
         
         FBSDKGraphRequest(graphPath: "/me", parameters: ["fields" : "id, name,email"]).start { (connection, result, error) in
-            
             if error != nil{
                 print("Error:", error ?? "")
             }
