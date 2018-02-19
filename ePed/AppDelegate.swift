@@ -30,6 +30,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         //window?.rootViewController = UINavigationController(rootViewController: LoginViewController())
         window?.rootViewController = LoginViewController()
         
+        //If logged in, skip the login screen
+        if FBSDKAccessToken.current() != nil || GIDSignIn.sharedInstance().hasAuthInKeychain(){
+            let MainVC: UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()!
+            
+            window?.rootViewController = MainVC
+        }else {
+            window?.rootViewController = LoginViewController()
+        }
+        
         return true
     }
 

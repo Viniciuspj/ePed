@@ -72,9 +72,10 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate, GIDSignIn
         super.viewDidLoad()
 
         prepareLayout()
-        
+ 
         GIDSignIn.sharedInstance().uiDelegate = self
-        //GIDSignIn.sharedInstance().signIn()
+        //GIDSignIn.sharedInstance().signOut()
+        
     }
 
     func prepareLayout(){
@@ -164,7 +165,9 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate, GIDSignIn
             }
             print(result ?? "")
         }
+
     }
+    
 }
 
 

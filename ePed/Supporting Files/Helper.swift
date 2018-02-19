@@ -33,7 +33,29 @@ struct Helper{
     func getAppFont(fontSize size: Int) -> UIFont{
         return UIFont.init(name: "Avenir-book", size: CGFloat(size))!
     }
+    
+    ///Utilize para facilitar a instancia de ViewControllers do Storyboard
+    func storyBoardWithName(name:String, storyboardId:String? = nil) -> UIViewController{
+        if let storyboardId = storyboardId{
+            return UIStoryboard(name: name, bundle: nil).instantiateViewController(withIdentifier: storyboardId)
+        }else{
+            return UIStoryboard(name: name, bundle: nil).instantiateInitialViewController()!
+        }
+    }
+    
+    ///Utilize para mostrar um alertviewcontroller com opção
+    func showAlert(viewController: UIViewController, title: String, message: String, block: (() -> Void)? = nil){
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        
+        let retryAction = UIAlertAction(title: "OK", style: .default, handler: { (_) -> Void in
+            block?()
+        })
+        alertController.addAction(retryAction)
+        
+        viewController.present(alertController, animated: true, completion: nil)
+    }
 }
+
 
 @IBDesignable class UITextViewFixed: UITextView {
     override func layoutSubviews() {
