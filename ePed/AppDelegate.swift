@@ -69,6 +69,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             
             guard let email = user?.email else { return }
             print("Logged into Firebase with Google", email)
+            
+            let MainVC: UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()!
+            
+            self.window?.rootViewController?.present(MainVC, animated: true, completion: nil)
         }
     }
     

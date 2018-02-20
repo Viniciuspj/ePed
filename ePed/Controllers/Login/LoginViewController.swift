@@ -142,13 +142,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate, GIDSignIn
         let credentials = FacebookAuthProvider.credential(withAccessToken: accessTokenString)
         authenticateWithFirebase(credentials)
     }
-    
-    //MARK Google Login
-    func sign(inWillDispatch signIn: GIDSignIn!, error: Error!) {
-        //Se estiver logado
-        print(signIn.currentUser)
-    }
-    
+
     func authenticateWithFirebase(_ credentials: AuthCredential){
         //Firebase login with fb user
         Auth.auth().signIn(with: credentials) { (user, error) in
@@ -165,9 +159,11 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate, GIDSignIn
             }
             print(result ?? "")
         }
-
+        
+        //Redirect to MainPage
+        let MainVc = helper.storyBoardWithName(name: "Main")
+        present(MainVc, animated: true, completion: nil)
     }
-    
 }
 
 
