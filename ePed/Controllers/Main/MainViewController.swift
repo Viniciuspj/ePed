@@ -14,4 +14,8 @@ class MainViewController: UIViewController {
         
     }
     
+    @IBAction func _5KgPressed(_ sender: UITapGestureRecognizer) {
+        
+        
+    }
 }
