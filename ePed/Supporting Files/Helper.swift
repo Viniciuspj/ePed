@@ -22,14 +22,46 @@ enum AppColors{
     }
 }
 
-struct Helper{
+enum DataLoaderStrings: String {
     
     //App texts and strings
-    let appNameText = "ePed"
-    let appSubnameText = NSLocalizedString("Emergência Pediátrica", comment: "Emergência Pediátrica")
-    let noUserText = NSLocalizedString("Entre sem registro", comment: "Entre sem logar")
-    let termsText = NSLocalizedString("Termos de uso", comment: "Termos de uso")
+    case appName = "ePed"
+    case appSubnameText = "Emergência Pediátrica"
+    case noUserText = "Entre sem registro"
+    case termsText = "Termos de uso"
     
+    //Tape codes values strings
+    case equipment = "Equipamento"
+    case resuscitationBag = "Bolsa de ventilação/insuflador"
+    case oxygenMask = "Máscara de oxigênio (NRB)"
+    case oralAirway = "Cânula orofaríngea (mm)"
+    case laryngoscopeblade = "Lâmina laringoscópica (tamanho)"
+    case ETtube = "Tubo ET (mm)"
+    case ETtubeInserctionLength = "Comprimento de inserção do tubo ET (cm)"
+    case suctionCatheter = "Cateter de aspiração (F)"
+    case BPcuff = "Esfigmomanômetro"
+    case IVcatheter = "Cateter IV (ga)"
+    case IO = "IO (ga)"
+    case NGtube = "Tubo NG (F)"
+    case urinaryCatheter = "Cateter urinário (F)"
+    case chestTube = "Tubo torácico (F)"
+    
+    //Tapes columns
+    case smallInfant = "Bebê pequeno 6-7kg"
+    case smallChild = "Bebê/criança"
+    case child = "Criança"
+    case pediatric = "Pediátrica"
+    case straight = "reta"
+    case straightCurved = "reta ou curva"
+    case uncuffed = "sem cuff"
+    case cuffed = "com cuff"
+    
+    var localized: String {
+        return self.rawValue.localized()
+    }
+}
+
+struct Helper{
     func getAppFont(fontSize size: Int) -> UIFont{
         return UIFont.init(name: "Avenir-book", size: CGFloat(size))!
     }

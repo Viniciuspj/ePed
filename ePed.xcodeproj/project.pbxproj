@@ -19,6 +19,8 @@
 		EA61AC2B202F6A0800E01639 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA61AC2A202F6A0800E01639 /* GoogleService-Info.plist */; };
 		EAF7D77920331B240049145C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF7D77820331B240049145C /* Extensions.swift */; };
 		EAF7D77C203C3FD40049145C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF7D77B203C3FD40049145C /* MainViewController.swift */; };
+		EAF7D77E2041A9FC0049145C /* ShowInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF7D77D2041A9FC0049145C /* ShowInformationViewController.swift */; };
+		EAF7D7812041B0330049145C /* TapeColorValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF7D7802041B0330049145C /* TapeColorValues.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		EA795A4D2032146700B5C562 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Main.strings"; sourceTree = "<group>"; };
 		EAF7D77820331B240049145C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		EAF7D77B203C3FD40049145C /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		EAF7D77D2041A9FC0049145C /* ShowInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowInformationViewController.swift; sourceTree = "<group>"; };
+		EAF7D7802041B0330049145C /* TapeColorValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapeColorValues.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +96,7 @@
 		EA61AC17202F680E00E01639 /* ePed */ = {
 			isa = PBXGroup;
 			children = (
+				EAF7D77F2041AF7B0049145C /* Model */,
 				EA795A4C2031D3E900B5C562 /* Views */,
 				EA795A4B2031D3DA00B5C562 /* Controllers */,
 				EA795A4A2031D3C300B5C562 /* Supporting Files */,
@@ -144,8 +149,17 @@
 			isa = PBXGroup;
 			children = (
 				EAF7D77B203C3FD40049145C /* MainViewController.swift */,
+				EAF7D77D2041A9FC0049145C /* ShowInformationViewController.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		EAF7D77F2041AF7B0049145C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EAF7D7802041B0330049145C /* TapeColorValues.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,6 +316,8 @@
 				EA61AC19202F680E00E01639 /* AppDelegate.swift in Sources */,
 				EA5F52692032228100B6FEF8 /* Helper.swift in Sources */,
 				EAF7D77920331B240049145C /* Extensions.swift in Sources */,
+				EAF7D7812041B0330049145C /* TapeColorValues.swift in Sources */,
+				EAF7D77E2041A9FC0049145C /* ShowInformationViewController.swift in Sources */,
 				EAF7D77C203C3FD40049145C /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -24,7 +24,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate, GIDSignIn
     
     lazy var appName: UITextView = {
        let textView = UITextView()
-        textView.text = helper.appNameText
+        textView.text = DataLoaderStrings.appName.rawValue
         textView.textColor = UIColor.darkGray
         textView.font = helper.getAppFont(fontSize: 50)
         textView.textAlignment = .center
@@ -37,7 +37,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate, GIDSignIn
     
     lazy var appSubname: UITextView = {
         let textView = UITextView()
-        textView.text = helper.appSubnameText
+        textView.text = DataLoaderStrings.appSubnameText.localized
         textView.font = helper.getAppFont(fontSize: 30)
         textView.textColor = UIColor.darkGray
         textView.textAlignment = .center
@@ -48,7 +48,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate, GIDSignIn
     
     lazy var noSignInButton: UIButton = {
         let button = UIButton()
-        button.setTitle(helper.noUserText, for: .normal)
+        button.setTitle(DataLoaderStrings.noUserText.localized, for: .normal)
         button.setTitleColor(UIColor.gray, for: .normal)
         button.titleLabel!.textAlignment = .center
         button.layer.borderColor = UIColor.lightGray.cgColor
@@ -62,7 +62,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate, GIDSignIn
     lazy var termsButton: UIButton = {
         let button = UIButton()
         button.setTitleColor(AppColors.green.getColor(), for: .normal)
-        button.setTitle(helper.termsText, for: .normal)
+        button.setTitle(DataLoaderStrings.termsText.localized, for: .normal)
         button.titleLabel!.textAlignment = .center
         button.titleLabel?.font = helper.getAppFont(fontSize: 18)
         return button

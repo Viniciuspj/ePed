@@ -223,6 +223,9 @@
                         <viewLayoutGuide key="safeArea" id="PpQ-lw-yFG"/>
                     </view>
                     <navigationItem key="navigationItem" title="ePed" id="APT-7Z-HIR"/>
+                    <connections>
+                        <segue destination="Odu-nJ-Zdh" kind="show" identifier="goToInfoSegue" id="geJ-lk-fHb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ixP-eq-xc7" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="wdB-cB-R6d">
@@ -232,6 +235,21 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1381.5999999999999" y="117.39130434782609"/>
+        </scene>
+        <!--Show Information View Controller-->
+        <scene sceneID="YYp-Xg-CTr">
+            <objects>
+                <viewController id="Odu-nJ-Zdh" customClass="ShowInformationViewController" customModule="ePed" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rZT-94-CIb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="EJH-qy-FBs"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j6i-D9-HvA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2212" y="116"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dc0-TF-KVV">
