@@ -56,6 +56,17 @@ enum DataLoaderStrings: String {
     case uncuffed = "sem cuff"
     case cuffed = "com cuff"
     
+    //Colors
+    case Gray = "Cinza"
+    case Pink = "Rosa"
+    case Red = "Vermelho"
+    case Purple = "Roxo"
+    case Yellow = "Amarelo"
+    case White = "Branco"
+    case Blue = "Azul"
+    case Orange = "Laranja"
+    case Green = "Verde"
+    
     var localized: String {
         return self.rawValue.localized()
     }

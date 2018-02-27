@@ -8,24 +8,24 @@
 
 import Foundation
 
-enum ColorScale {
-    case Gray
-    case Pink
-    case Red
-    case Purple
-    case Yellow
-    case White
-    case Blue
-    case Orange
-    case Green
+enum ColorScale: String {
+    case Equipment = "0"
+    case Gray = "3-5kg"
+    case Pink = "6-7kg"
+    case Red = "8-9kg"
+    case Purple = "10-11kg"
+    case Yellow = "12-14kg"
+    case White = "15-18kg"
+    case Blue = "19-23kg"
+    case Orange = "24-29kg"
+    case Green = "30-36kg"
 }
 
 class TapeColorValues {
     let numberOfScaleLines = 14
-    
     var TapeCodesInfos = [String : [String]]()
     var colorSelected: ColorScale?
-    var linePositions: Array<String>
+    var lineValues: Array<String>
     
     var equipmentNames: Array<String> {
         get{
@@ -37,15 +37,13 @@ class TapeColorValues {
     }
 
     init() {
-        self.linePositions = Array(repeating: "", count: numberOfScaleLines)
-        
-        TapeCodesInfos["0"] = self.equipmentNames
+        self.lineValues = Array(repeating: "", count: numberOfScaleLines)
+        TapeCodesInfos[ColorScale.Equipment.rawValue] = self.equipmentNames
     }
 
     
     func setEquipmentNames(){
-        //14 lines
-        self.equipmentNames = Array(repeating: "", count: numberOfScaleLines)
+        //14 lines aligned with linePositions
         self.equipmentNames = [
             DataLoaderStrings.equipment.localized, DataLoaderStrings.resuscitationBag.localized,
             DataLoaderStrings.oxygenMask.localized,DataLoaderStrings.oralAirway.localized,
@@ -63,20 +61,11 @@ class TapeColorValues {
     }
     
     func setArrayPositions(_ colorLineDB: ColorLineInfoDatabase) {
-        self.linePositions[0] = colorLineDB.header
-        self.linePositions[1] = colorLineDB.resuscitationBag
-        self.linePositions[2] = colorLineDB.oxygenMask
-        self.linePositions[3] = colorLineDB.oralAirway
-        self.linePositions[4] = colorLineDB.laryngoscopeblade
-        self.linePositions[5] = colorLineDB.ETtube
-        self.linePositions[6] = colorLineDB.ETtubeInserctionLength
-        self.linePositions[7] = colorLineDB.suctionCatheter
-        self.linePositions[8] = colorLineDB.BPcuff
-        self.linePositions[9] = colorLineDB.IVcatheter
-        self.linePositions[10] = colorLineDB.IO
-        self.linePositions[11] = colorLineDB.NGtube
-        self.linePositions[12] = colorLineDB.urinaryCatheter
-        self.linePositions[13] = colorLineDB.chestTube
+        //14 lines
+        self.lineValues = [colorLineDB.header,colorLineDB.resuscitationBag,colorLineDB.oxygenMask, colorLineDB.oralAirway,colorLineDB.laryngoscopeblade,colorLineDB.ETtube,colorLineDB.ETtubeInserctionLength,colorLineDB.suctionCatheter, colorLineDB.BPcuff,colorLineDB.IVcatheter,colorLineDB.IO,colorLineDB.NGtube,colorLineDB.urinaryCatheter,colorLineDB.chestTube ]
+        
+        //Key:value Eq. ["3-5Kg"] = [[info array about the weight]]
+        TapeCodesInfos[(colorSelected?.rawValue)!] = self.lineValues
     }
 }
 
@@ -103,6 +92,7 @@ struct ColorLineInfoDatabase {
     
     mutating func getScale(colorSelected: ColorScale) {
         switch colorSelected {
+        
         case ColorScale.Blue:
             header = ""
             resuscitationBag = DataLoaderStrings.smallChild.localized
@@ -230,7 +220,9 @@ struct ColorLineInfoDatabase {
             NGtube = "5-8"
             urinaryCatheter = "8"
             chestTube = "10-12"
-
+            
+        default:
+            header = DataLoaderStrings.equipment.localized
         }
     }
     
