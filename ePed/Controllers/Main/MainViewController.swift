@@ -10,29 +10,37 @@ import UIKit
 
 class MainViewController: UIViewController {
     
-    override func viewDidLoad() {
-        
-        
-        var array: [String] = ["a","b","v"]
-        
-        var teste: [String : [String] ] = ["1":array,"3":array]
-        
-        print(teste["1"]![0])
-        
-        teste["2"] = array
-        
-        print(teste["1"]![1])
-        
-        
-        
+    var scaleSelected: ColorScale?
+    
+    override func viewDidLoad() { 
     }
     
-    @IBAction func _5KgPressed(_ sender: UITapGestureRecognizer) {
-        goToInformationVC()
+    @IBAction func get35KgValues(_ sender: UITapGestureRecognizer) {
+        goToInformationVC(scaleSelected: .Gray)
     }
     
-    func goToInformationVC(){
-        
+    @IBAction func get67KgValues(_ sender: UITapGestureRecognizer) {
+        goToInformationVC(scaleSelected: .Pink)
+    }
+    
+    @IBAction func get89KgValues(_ sender: UITapGestureRecognizer) {
+        goToInformationVC(scaleSelected: .Red)
+    }
+    
+    func goToInformationVC(scaleSelected: ColorScale){
+        self.scaleSelected = scaleSelected
         performSegue(withIdentifier: "goToInfoSegue", sender: self)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is ShowInformationViewController{
+            let showInfoVC = segue.destination as? ShowInformationViewController
+            
+            if let scaleSeleted = self.scaleSelected{
+                showInfoVC?.scaleSelected = scaleSeleted
+            }
+        }
+        
+    }
+    
 }
