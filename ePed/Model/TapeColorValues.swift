@@ -6,7 +6,7 @@
 //  Copyright © 2018 Vinícius Gontijo. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 enum ColorScale: String {
     case Equipment = "0"
@@ -19,6 +19,32 @@ enum ColorScale: String {
     case Blue = "19-23kg"
     case Orange = "24-29kg"
     case Green = "30-36kg"
+    
+    var color: UIColor{
+        switch self {
+        case .Gray:
+            return UIColor(red: 129/255, green: 128/255, blue: 126/255, alpha: 1)
+        case .Pink:
+            return UIColor(red: 194/255, green: 144/255, blue: 164/255, alpha: 1)
+        case .Red:
+            return UIColor(red: 129/255, green: 12/255, blue: 34/255, alpha: 1)
+        case .Purple:
+            return UIColor(red: 74/255, green: 30/255, blue: 107/255, alpha: 1)
+        case .Yellow:
+            return UIColor(red: 207/255, green: 194/255, blue: 53/255, alpha: 1)
+        case .White:
+            return UIColor.white
+        case .Blue:
+            return UIColor(red: 65/255, green: 114/255, blue: 157/255, alpha: 1)
+        case .Orange:
+            return UIColor(red: 174/255, green: 84/255, blue: 34/255, alpha: 1)
+        case .Green:
+            return UIColor(red: 91/255, green: 125/255, blue: 39/255, alpha: 1)
+            
+        default:
+            return UIColor()
+        }
+    }
 }
 
 class TapeColorValues {
@@ -26,19 +52,17 @@ class TapeColorValues {
     var TapeCodesInfos = [String : [String]]()
     var colorSelected: ColorScale?
     var lineValues: Array<String>
+    var equipmentNames = Array<String>()
     
-    var equipmentNames: Array<String> {
-        get{
-            return self.equipmentNames
-        }
-        set{
-            setEquipmentNames()
-        }
-    }
-
-    init() {
+    init(colorSelected: ColorScale) {
+        self.equipmentNames = Array(repeating: "", count: numberOfScaleLines)
         self.lineValues = Array(repeating: "", count: numberOfScaleLines)
+        
+        setEquipmentNames()
         TapeCodesInfos[ColorScale.Equipment.rawValue] = self.equipmentNames
+        
+        self.colorSelected = colorSelected
+        setArrayTapeColorValues()
     }
 
     

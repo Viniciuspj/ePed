@@ -44,7 +44,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ArI-Lf-67f">
                                         <rect key="frame" x="0.0" y="0.0" width="341" height="118"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UWK-Wc-6rU">
+                                            <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UWK-Wc-6rU">
                                                 <rect key="frame" x="0.0" y="0.0" width="107" height="118"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3-5 kg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Qh-db-qUm">
@@ -64,7 +64,7 @@
                                                     <outletCollection property="gestureRecognizers" destination="wdB-cB-R6d" appends="YES" id="Pmg-Mn-JUG"/>
                                                 </connections>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oaf-uQ-a7L">
+                                            <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oaf-uQ-a7L">
                                                 <rect key="frame" x="117" y="0.0" width="107" height="118"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6-7 kg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ghw-eH-vRg">
@@ -84,7 +84,7 @@
                                                     <outletCollection property="gestureRecognizers" destination="MCz-rA-xrd" appends="YES" id="iAd-5e-G6H"/>
                                                 </connections>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qOR-bX-AfS">
+                                            <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qOR-bX-AfS">
                                                 <rect key="frame" x="234" y="0.0" width="107" height="118"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8-9 kg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9HR-h3-7zz">
@@ -109,7 +109,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="e29-fw-8ve">
                                         <rect key="frame" x="0.0" y="128" width="341" height="118"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VKy-Su-r4g">
+                                            <view tag="4" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VKy-Su-r4g">
                                                 <rect key="frame" x="0.0" y="0.0" width="107" height="118"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10-11 kg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dav-xc-drH">
@@ -129,7 +129,7 @@
                                                     <outletCollection property="gestureRecognizers" destination="K7H-hP-CQT" appends="YES" id="dh8-jP-xco"/>
                                                 </connections>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uUm-jO-8oz">
+                                            <view tag="5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uUm-jO-8oz">
                                                 <rect key="frame" x="117" y="0.0" width="107" height="118"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12-14 kg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mhr-kH-ygt">
@@ -149,7 +149,7 @@
                                                     <outletCollection property="gestureRecognizers" destination="06y-d6-ZsX" appends="YES" id="0dV-aW-EiW"/>
                                                 </connections>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5re-40-PQn">
+                                            <view tag="6" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5re-40-PQn">
                                                 <rect key="frame" x="234" y="0.0" width="107" height="118"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15-18 kg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ydr-rM-xok">
@@ -174,7 +174,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="tBy-d5-5pY">
                                         <rect key="frame" x="0.0" y="256" width="341" height="118"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ju2-nn-5Mr">
+                                            <view tag="7" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ju2-nn-5Mr">
                                                 <rect key="frame" x="0.0" y="0.0" width="107" height="118"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="19-23 kg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uI8-YW-VN1">
@@ -194,7 +194,7 @@
                                                     <outletCollection property="gestureRecognizers" destination="0a4-UG-amU" appends="YES" id="uFK-2G-sei"/>
                                                 </connections>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z58-h3-AI5">
+                                            <view tag="8" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z58-h3-AI5">
                                                 <rect key="frame" x="117" y="0.0" width="107" height="118"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24-29 kg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jgg-up-Vac">
@@ -214,7 +214,7 @@
                                                     <outletCollection property="gestureRecognizers" destination="e4c-3C-RWw" appends="YES" id="IcF-ML-3Gc"/>
                                                 </connections>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="877-gz-f03">
+                                            <view tag="9" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="877-gz-f03">
                                                 <rect key="frame" x="234" y="0.0" width="107" height="118"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30-36 kg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vh5-kJ-wug">
@@ -256,31 +256,64 @@
                     </view>
                     <navigationItem key="navigationItem" title="ePed" id="APT-7Z-HIR"/>
                     <connections>
+                        <outlet property="view10_11Kg" destination="VKy-Su-r4g" id="gjD-OT-Lj1"/>
+                        <outlet property="view12_14Kg" destination="uUm-jO-8oz" id="rGO-8T-AD3"/>
+                        <outlet property="view15_18Kg" destination="5re-40-PQn" id="Nos-ag-PUa"/>
+                        <outlet property="view19_23Kg" destination="Ju2-nn-5Mr" id="OEv-qa-ZY2"/>
+                        <outlet property="view24_29Kg" destination="Z58-h3-AI5" id="5VN-r3-gmF"/>
+                        <outlet property="view30_36Kg" destination="877-gz-f03" id="pG7-Kr-Egv"/>
+                        <outlet property="view3_5kg" destination="UWK-Wc-6rU" id="qFs-Tm-hBz"/>
+                        <outlet property="view6_7Kg" destination="Oaf-uQ-a7L" id="OcY-hY-7kj"/>
+                        <outlet property="view8_9Kg" destination="qOR-bX-AfS" id="VLj-MB-o2L"/>
                         <segue destination="Odu-nJ-Zdh" kind="show" identifier="goToInfoSegue" id="geJ-lk-fHb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ixP-eq-xc7" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="wdB-cB-R6d">
                     <connections>
-                        <action selector="get35KgValues:" destination="xYy-y5-CPj" id="v1O-6v-vqn"/>
+                        <action selector="getWeightValues:" destination="xYy-y5-CPj" id="prz-Fe-Suj"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="MCz-rA-xrd">
                     <connections>
-                        <action selector="get67KgValues:" destination="xYy-y5-CPj" id="Utm-jw-WOH"/>
+                        <action selector="getWeightValues:" destination="xYy-y5-CPj" id="TwE-uy-ZFK"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="T8Q-fZ-Twa">
                     <connections>
-                        <action selector="get89KgValues:" destination="xYy-y5-CPj" id="sRG-XT-DZX"/>
+                        <action selector="getWeightValues:" destination="xYy-y5-CPj" id="2t3-oG-iJ0"/>
                     </connections>
                 </tapGestureRecognizer>
-                <tapGestureRecognizer id="K7H-hP-CQT"/>
-                <tapGestureRecognizer id="06y-d6-ZsX"/>
-                <tapGestureRecognizer id="epK-C0-lQd"/>
-                <tapGestureRecognizer id="0a4-UG-amU"/>
-                <tapGestureRecognizer id="e4c-3C-RWw"/>
-                <tapGestureRecognizer id="0GN-ms-bS6"/>
+                <tapGestureRecognizer id="06y-d6-ZsX">
+                    <connections>
+                        <action selector="getWeightValues:" destination="xYy-y5-CPj" id="E2K-TE-cxD"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="epK-C0-lQd">
+                    <connections>
+                        <action selector="getWeightValues:" destination="xYy-y5-CPj" id="blB-Pv-f4b"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="0a4-UG-amU">
+                    <connections>
+                        <action selector="getWeightValues:" destination="xYy-y5-CPj" id="prM-XU-xPK"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="e4c-3C-RWw">
+                    <connections>
+                        <action selector="getWeightValues:" destination="xYy-y5-CPj" id="mDb-Gy-ct0"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="0GN-ms-bS6">
+                    <connections>
+                        <action selector="getWeightValues:" destination="xYy-y5-CPj" id="GfK-a5-Wks"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="K7H-hP-CQT">
+                    <connections>
+                        <action selector="getWeightValues:" destination="xYy-y5-CPj" id="46Q-OY-5Qz"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1381.5999999999999" y="117.39130434782609"/>
         </scene>

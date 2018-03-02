@@ -14,9 +14,23 @@ class ShowInformationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        getColorValues()
+        
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    func getColorValues()  {
+        self.view.backgroundColor = scaleSelected?.color
+        
+        if let colorSelected = scaleSelected{
+            let TapeColor = TapeColorValues(colorSelected: colorSelected)
+            
+            for item in TapeColor.lineValues{
+                print(item)
+            }
+            
+        } else{
+            print("No color selected")
+        }
     }
 }
