@@ -11,21 +11,32 @@ import UIKit
 class ShowInformationViewController: UIViewController {
     
     var scaleSelected: ColorScale?
+    var tapeColor: TapeColorValues?
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var kgSelected: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         getColorValues()
         
+        prepareTableView()
     }
-
+    
+    func prepareTableView(){
+        tableView.delegate = self
+        tableView.dataSource = self
+        //tableView.estimatedRowHeight = 90.0
+    }
+    
     func getColorValues()  {
-        self.view.backgroundColor = scaleSelected?.color
         
         if let colorSelected = scaleSelected{
-            let TapeColor = TapeColorValues(colorSelected: colorSelected)
+            kgSelected.text = colorSelected.rawValue
             
-            for item in TapeColor.lineValues{
+            tapeColor = TapeColorValues(colorSelected: colorSelected)
+            
+            for item in tapeColor!.lineValues{
                 print(item)
             }
             
@@ -33,4 +44,26 @@ class ShowInformationViewController: UIViewController {
             print("No color selected")
         }
     }
+}
+
+extension ShowInformationViewController: UITableViewDelegate, UITableViewDataSource{
+    
+    //Equipamento|Item
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return tapeColor!.numberOfScaleLines
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! GridTableViewCell
+        
+        cell.equipmentName.text = tapeColor?.equipmentNames[indexPath.row]
+        cell.equipmentValue.text = tapeColor?.lineValues[indexPath.row]
+        
+        cell.viewEquiName.backgroundColor = scaleSelected?.color
+        cell.viewEquipValue.backgroundColor = scaleSelected?.color
+    
+        return cell
+    }
+    
+  
 }

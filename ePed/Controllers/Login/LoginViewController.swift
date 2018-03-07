@@ -55,7 +55,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate, GIDSignIn
         button.layer.cornerRadius = 6
         button.layer.borderWidth = 1
         button.backgroundColor = .clear
-        
+        button.addTarget(self, action: #selector(goToMainController) , for: UIControlEvents.touchUpInside)
         return button
     }()
 
@@ -161,9 +161,16 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate, GIDSignIn
         }
         
         //Redirect to MainPage
+        goToMainController()
+    }
+    
+    //No signin button
+    @objc func goToMainController(){
+        //Redirect to MainPage
         let MainVc = helper.storyBoardWithName(name: "Main")
         present(MainVc, animated: true, completion: nil)
     }
+    
 }
 
 

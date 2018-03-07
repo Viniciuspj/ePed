@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		24EAAD0A0753B1B0A913A34F /* Pods_ePed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 950673F6363A354A92E40671 /* Pods_ePed.framework */; };
+		CA8CAFA988455799D03B8B0A /* Pods_ePed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A5B5F9B6397463F51AE7D86 /* Pods_ePed.framework */; };
 		EA5F526420321B1F00B6FEF8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA5F526620321B1F00B6FEF8 /* Localizable.strings */; };
 		EA5F52692032228100B6FEF8 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5F52682032228100B6FEF8 /* Helper.swift */; };
 		EA5F526B2032443600B6FEF8 /* FacebookSDKStrings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EA5F526A2032443600B6FEF8 /* FacebookSDKStrings.bundle */; };
@@ -21,12 +21,11 @@
 		EAF7D77C203C3FD40049145C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF7D77B203C3FD40049145C /* MainViewController.swift */; };
 		EAF7D77E2041A9FC0049145C /* ShowInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF7D77D2041A9FC0049145C /* ShowInformationViewController.swift */; };
 		EAF7D7812041B0330049145C /* TapeColorValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF7D7802041B0330049145C /* TapeColorValues.swift */; };
+		FB28FA8F20504F3F0052B29D /* GridTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB28FA8E20504F3F0052B29D /* GridTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		29F610459F8238A1A37D532E /* Pods-ePed.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ePed.release.xcconfig"; path = "Pods/Target Support Files/Pods-ePed/Pods-ePed.release.xcconfig"; sourceTree = "<group>"; };
-		322CABCE60BEBDB1D3DEC037 /* Pods-ePed.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ePed.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ePed/Pods-ePed.debug.xcconfig"; sourceTree = "<group>"; };
-		950673F6363A354A92E40671 /* Pods_ePed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ePed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A5B5F9B6397463F51AE7D86 /* Pods_ePed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ePed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA5F526520321B1F00B6FEF8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EA5F526720321C3F00B6FEF8 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		EA5F52682032228100B6FEF8 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
@@ -44,6 +43,9 @@
 		EAF7D77B203C3FD40049145C /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		EAF7D77D2041A9FC0049145C /* ShowInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowInformationViewController.swift; sourceTree = "<group>"; };
 		EAF7D7802041B0330049145C /* TapeColorValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapeColorValues.swift; sourceTree = "<group>"; };
+		EE0CB46481BCD56FA2749CF1 /* Pods-ePed.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ePed.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ePed/Pods-ePed.debug.xcconfig"; sourceTree = "<group>"; };
+		F3A17FCB6ADF5A5EFF3A5427 /* Pods-ePed.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ePed.release.xcconfig"; path = "Pods/Target Support Files/Pods-ePed/Pods-ePed.release.xcconfig"; sourceTree = "<group>"; };
+		FB28FA8E20504F3F0052B29D /* GridTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,26 +53,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24EAAD0A0753B1B0A913A34F /* Pods_ePed.framework in Frameworks */,
+				CA8CAFA988455799D03B8B0A /* Pods_ePed.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		83B6DDB7BAB379A2227CFD46 /* Pods */ = {
+		A5B58AEF4737318F1B68F9C3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				322CABCE60BEBDB1D3DEC037 /* Pods-ePed.debug.xcconfig */,
-				29F610459F8238A1A37D532E /* Pods-ePed.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		D5565C7CFDC5F12FB9745459 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				950673F6363A354A92E40671 /* Pods_ePed.framework */,
+				1A5B5F9B6397463F51AE7D86 /* Pods_ePed.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -80,8 +73,8 @@
 			children = (
 				EA61AC17202F680E00E01639 /* ePed */,
 				EA61AC16202F680E00E01639 /* Products */,
-				83B6DDB7BAB379A2227CFD46 /* Pods */,
-				D5565C7CFDC5F12FB9745459 /* Frameworks */,
+				F0A1232DB535F989DC2B66AF /* Pods */,
+				A5B58AEF4737318F1B68F9C3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -141,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				EA61AC1C202F680E00E01639 /* Main.storyboard */,
+				FB28FA9020504F450052B29D /* Cells */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -162,6 +156,23 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		F0A1232DB535F989DC2B66AF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EE0CB46481BCD56FA2749CF1 /* Pods-ePed.debug.xcconfig */,
+				F3A17FCB6ADF5A5EFF3A5427 /* Pods-ePed.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FB28FA9020504F450052B29D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				FB28FA8E20504F3F0052B29D /* GridTableViewCell.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -169,12 +180,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EA61AC27202F680E00E01639 /* Build configuration list for PBXNativeTarget "ePed" */;
 			buildPhases = (
-				8ED2C7B2A1790B0E63A44621 /* [CP] Check Pods Manifest.lock */,
+				FBFBDF23EAE05D5164BD2ADC /* [CP] Check Pods Manifest.lock */,
 				EA61AC11202F680E00E01639 /* Sources */,
 				EA61AC12202F680E00E01639 /* Frameworks */,
 				EA61AC13202F680E00E01639 /* Resources */,
-				312AF96BBA46FACC67DB00D3 /* [CP] Embed Pods Frameworks */,
-				F90F72F5FF9A5A9CEA70D564 /* [CP] Copy Pods Resources */,
+				6E9F76AE718DFD77D515E331 /* [CP] Embed Pods Frameworks */,
+				30AE217236813714852D735A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -237,7 +248,25 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		312AF96BBA46FACC67DB00D3 /* [CP] Embed Pods Frameworks */ = {
+		30AE217236813714852D735A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ePed/Pods-ePed-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ePed/Pods-ePed-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6E9F76AE718DFD77D515E331 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -269,7 +298,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ePed/Pods-ePed-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8ED2C7B2A1790B0E63A44621 /* [CP] Check Pods Manifest.lock */ = {
+		FBFBDF23EAE05D5164BD2ADC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -287,24 +316,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F90F72F5FF9A5A9CEA70D564 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-ePed/Pods-ePed-resources.sh",
-				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ePed/Pods-ePed-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -315,6 +326,7 @@
 				EA61AC1B202F680E00E01639 /* LoginViewController.swift in Sources */,
 				EA61AC19202F680E00E01639 /* AppDelegate.swift in Sources */,
 				EA5F52692032228100B6FEF8 /* Helper.swift in Sources */,
+				FB28FA8F20504F3F0052B29D /* GridTableViewCell.swift in Sources */,
 				EAF7D77920331B240049145C /* Extensions.swift in Sources */,
 				EAF7D7812041B0330049145C /* TapeColorValues.swift in Sources */,
 				EAF7D77E2041A9FC0049145C /* ShowInformationViewController.swift in Sources */,
@@ -465,7 +477,7 @@
 		};
 		EA61AC28202F680E00E01639 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 322CABCE60BEBDB1D3DEC037 /* Pods-ePed.debug.xcconfig */;
+			baseConfigurationReference = EE0CB46481BCD56FA2749CF1 /* Pods-ePed.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -482,7 +494,7 @@
 		};
 		EA61AC29202F680E00E01639 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 29F610459F8238A1A37D532E /* Pods-ePed.release.xcconfig */;
+			baseConfigurationReference = F3A17FCB6ADF5A5EFF3A5427 /* Pods-ePed.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

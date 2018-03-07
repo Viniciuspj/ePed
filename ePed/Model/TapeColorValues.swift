@@ -23,23 +23,23 @@ enum ColorScale: String {
     var color: UIColor{
         switch self {
         case .Gray:
-            return UIColor(red: 129/255, green: 128/255, blue: 126/255, alpha: 1)
+            return UIColor(red: 165/255, green: 165/255, blue: 165/255, alpha: 1)
         case .Pink:
-            return UIColor(red: 194/255, green: 144/255, blue: 164/255, alpha: 1)
+            return UIColor(red: 242/255, green: 170/255, blue: 220/255, alpha: 1)
         case .Red:
-            return UIColor(red: 129/255, green: 12/255, blue: 34/255, alpha: 1)
+            return UIColor(red: 200/255, green: 40/255, blue: 34/255, alpha: 0.9)
         case .Purple:
-            return UIColor(red: 74/255, green: 30/255, blue: 107/255, alpha: 1)
+            return UIColor(red: 112/255, green: 48/255, blue: 157/255, alpha: 0.8)
         case .Yellow:
-            return UIColor(red: 207/255, green: 194/255, blue: 53/255, alpha: 1)
+            return UIColor(red: 237/255, green: 237/255, blue: 53/255, alpha: 1)
         case .White:
             return UIColor.white
         case .Blue:
-            return UIColor(red: 65/255, green: 114/255, blue: 157/255, alpha: 1)
+            return UIColor(red: 33/255, green: 203/255, blue: 238/255, alpha: 1)
         case .Orange:
-            return UIColor(red: 174/255, green: 84/255, blue: 34/255, alpha: 1)
+            return UIColor(red: 254/255, green: 148/255, blue: 52/255, alpha: 1)
         case .Green:
-            return UIColor(red: 91/255, green: 125/255, blue: 39/255, alpha: 1)
+            return UIColor(red: 146/255, green: 208/255, blue: 89/255, alpha: 1)
             
         default:
             return UIColor()
@@ -49,7 +49,6 @@ enum ColorScale: String {
 
 class TapeColorValues {
     let numberOfScaleLines = 14
-    var TapeCodesInfos = [String : [String]]()
     var colorSelected: ColorScale?
     var lineValues: Array<String>
     var equipmentNames = Array<String>()
@@ -59,7 +58,6 @@ class TapeColorValues {
         self.lineValues = Array(repeating: "", count: numberOfScaleLines)
         
         setEquipmentNames()
-        TapeCodesInfos[ColorScale.Equipment.rawValue] = self.equipmentNames
         
         self.colorSelected = colorSelected
         setArrayTapeColorValues()
@@ -87,9 +85,6 @@ class TapeColorValues {
     func setArrayPositions(_ colorLineDB: ColorLineInfoDatabase) {
         //14 lines
         self.lineValues = [colorLineDB.header,colorLineDB.resuscitationBag,colorLineDB.oxygenMask, colorLineDB.oralAirway,colorLineDB.laryngoscopeblade,colorLineDB.ETtube,colorLineDB.ETtubeInserctionLength,colorLineDB.suctionCatheter, colorLineDB.BPcuff,colorLineDB.IVcatheter,colorLineDB.IO,colorLineDB.NGtube,colorLineDB.urinaryCatheter,colorLineDB.chestTube ]
-        
-        //Key:value Eq. ["3-5Kg"] = [[info array about the weight]]
-        TapeCodesInfos[(colorSelected?.rawValue)!] = self.lineValues
     }
 }
 
@@ -118,7 +113,7 @@ struct ColorLineInfoDatabase {
         switch colorSelected {
         
         case ColorScale.Blue:
-            header = ""
+            header = DataLoaderStrings.Blue.localized
             resuscitationBag = DataLoaderStrings.smallChild.localized
             oxygenMask = DataLoaderStrings.pediatric.localized
             oralAirway = "50"
@@ -134,7 +129,7 @@ struct ColorLineInfoDatabase {
             chestTube = "10-12"
             
         case ColorScale.Gray:
-            header = ""
+            header = DataLoaderStrings.Gray.localized
             resuscitationBag = DataLoaderStrings.smallChild.localized
             oxygenMask = DataLoaderStrings.pediatric.localized
             oralAirway = "50"
@@ -150,7 +145,7 @@ struct ColorLineInfoDatabase {
             chestTube = "10-12"
             
         case ColorScale.Green:
-            header = ""
+            header = DataLoaderStrings.Green.localized
             resuscitationBag = DataLoaderStrings.smallChild.localized
             oxygenMask = DataLoaderStrings.pediatric.localized
             oralAirway = "50"
@@ -166,7 +161,7 @@ struct ColorLineInfoDatabase {
             chestTube = "10-12"
             
         case ColorScale.Orange:
-            header = ""
+            header = DataLoaderStrings.Orange.localized
             resuscitationBag = DataLoaderStrings.smallChild.localized
             oxygenMask = DataLoaderStrings.pediatric.localized
             oralAirway = "50"
@@ -181,8 +176,24 @@ struct ColorLineInfoDatabase {
             urinaryCatheter = "8"
             chestTube = "10-12"
             
-        case ColorScale.Pink, ColorScale.Red:
-            header = ""
+        case ColorScale.Pink:
+            header = DataLoaderStrings.Pink.localized
+            resuscitationBag = DataLoaderStrings.smallChild.localized
+            oxygenMask = DataLoaderStrings.pediatric.localized
+            oralAirway = "50"
+            laryngoscopeblade = "1 \(DataLoaderStrings.straight.localized)"
+            ETtube = "3.5 \(DataLoaderStrings.uncuffed.localized) 3.0 \(DataLoaderStrings.cuffed.localized)"
+            ETtubeInserctionLength = "10,5-11"
+            suctionCatheter = "8"
+            BPcuff = DataLoaderStrings.smallChild.localized
+            IVcatheter = "22-24"
+            IO = "18/15"
+            NGtube = "5-8"
+            urinaryCatheter = "8"
+            chestTube = "10-12"
+            
+        case ColorScale.Red:
+            header = DataLoaderStrings.Red.localized
             resuscitationBag = DataLoaderStrings.smallChild.localized
             oxygenMask = DataLoaderStrings.pediatric.localized
             oralAirway = "50"
@@ -198,7 +209,7 @@ struct ColorLineInfoDatabase {
             chestTube = "10-12"
             
         case ColorScale.Purple:
-            header = ""
+            header = DataLoaderStrings.Purple.localized
             resuscitationBag = DataLoaderStrings.smallChild.localized
             oxygenMask = DataLoaderStrings.pediatric.localized
             oralAirway = "50"
@@ -214,7 +225,7 @@ struct ColorLineInfoDatabase {
             chestTube = "10-12"
             
         case ColorScale.White:
-            header = ""
+            header = DataLoaderStrings.White.localized
             resuscitationBag = DataLoaderStrings.smallChild.localized
             oxygenMask = DataLoaderStrings.pediatric.localized
             oralAirway = "50"
@@ -230,7 +241,7 @@ struct ColorLineInfoDatabase {
             chestTube = "10-12"
             
         case ColorScale.Yellow:
-            header = ""
+            header = DataLoaderStrings.Yellow.localized
             resuscitationBag = DataLoaderStrings.smallChild.localized
             oxygenMask = DataLoaderStrings.pediatric.localized
             oralAirway = "50"
