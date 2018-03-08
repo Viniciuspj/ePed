@@ -239,38 +239,53 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Baseado em PALS da American Heart Association 2015 e Broselow" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ZF-bT-HHB">
-                                <rect key="frame" x="16" y="579" width="343" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ni-E0-y48">
+                                <rect key="frame" x="101" y="631" width="176" height="30"/>
+                                <state key="normal" title="Termos de uso"/>
+                                <connections>
+                                    <segue destination="3Ph-PE-Zc2" kind="show" id="CPg-pb-dZS"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Baseado em PALS da American Heart Association 2015 e Broselow" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ZF-bT-HHB">
+                                <rect key="frame" x="16" y="557" width="343" height="44"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ni-E0-y48">
-                                <rect key="frame" x="137" y="628" width="101" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Termos de uso"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ddh-gZ-Ohi" firstAttribute="leading" secondItem="0Hk-x1-dtS" secondAttribute="leadingMargin" id="0E8-pE-L44"/>
+                            <constraint firstItem="PpQ-lw-yFG" firstAttribute="trailing" secondItem="2ZF-bT-HHB" secondAttribute="trailing" constant="16" id="0Qh-eK-a0F"/>
+                            <constraint firstItem="2ZF-bT-HHB" firstAttribute="top" secondItem="O5g-m4-zCk" secondAttribute="bottom" constant="20" id="1Id-F5-8S8"/>
+                            <constraint firstItem="2ZF-bT-HHB" firstAttribute="leading" secondItem="PpQ-lw-yFG" secondAttribute="leading" constant="16" id="3yw-cr-h7s"/>
                             <constraint firstItem="PpQ-lw-yFG" firstAttribute="bottom" secondItem="O5g-m4-zCk" secondAttribute="bottom" constant="130" id="6V2-Qk-VsO"/>
                             <constraint firstItem="4Mz-ai-3YT" firstAttribute="trailing" secondItem="O5g-m4-zCk" secondAttribute="trailing" id="9PW-DO-mV6"/>
                             <constraint firstItem="ddh-gZ-Ohi" firstAttribute="trailing" secondItem="0Hk-x1-dtS" secondAttribute="trailingMargin" id="Mx8-Vr-4DP"/>
                             <constraint firstItem="O5g-m4-zCk" firstAttribute="leading" secondItem="PpQ-lw-yFG" secondAttribute="leading" constant="18" id="O8s-YQ-Xt4"/>
                             <constraint firstItem="ddh-gZ-Ohi" firstAttribute="leading" secondItem="4Mz-ai-3YT" secondAttribute="leading" id="PnQ-hu-Oo6"/>
+                            <constraint firstItem="PpQ-lw-yFG" firstAttribute="trailing" secondItem="2ni-E0-y48" secondAttribute="trailing" constant="98" id="RBc-h9-HXR"/>
+                            <constraint firstItem="2ni-E0-y48" firstAttribute="leading" secondItem="PpQ-lw-yFG" secondAttribute="leading" constant="101" id="Tj6-Yg-MRd"/>
                             <constraint firstItem="O5g-m4-zCk" firstAttribute="top" secondItem="4Mz-ai-3YT" secondAttribute="bottom" constant="21" id="Vpe-nY-mYs"/>
                             <constraint firstItem="ddh-gZ-Ohi" firstAttribute="trailing" secondItem="4Mz-ai-3YT" secondAttribute="trailing" id="hdN-VJ-6JD"/>
+                            <constraint firstItem="2ni-E0-y48" firstAttribute="top" secondItem="2ZF-bT-HHB" secondAttribute="bottom" constant="30" id="pic-Tn-RA7"/>
                             <constraint firstItem="ddh-gZ-Ohi" firstAttribute="top" secondItem="PpQ-lw-yFG" secondAttribute="top" constant="10" id="uB1-wj-9uA"/>
                             <constraint firstItem="4Mz-ai-3YT" firstAttribute="top" secondItem="ddh-gZ-Ohi" secondAttribute="bottom" constant="15" id="vir-LT-TPx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PpQ-lw-yFG"/>
                     </view>
                     <navigationItem key="navigationItem" title="ePed" id="APT-7Z-HIR">
-                        <barButtonItem key="leftBarButtonItem" title="Deslogar" id="r5C-42-Di4"/>
+                        <barButtonItem key="leftBarButtonItem" title="Sair" id="r5C-42-Di4">
+                            <connections>
+                                <action selector="logoutButton:" destination="xYy-y5-CPj" id="ibb-dv-3ve"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="codedByColorText" destination="4Mz-ai-3YT" id="ame-dR-oKd"/>
+                        <outlet property="resuscitationText" destination="ddh-gZ-Ohi" id="oQR-sq-Bbq"/>
+                        <outlet property="sourceText" destination="2ZF-bT-HHB" id="tLm-fL-5KF"/>
+                        <outlet property="terms" destination="2ni-E0-y48" id="Poe-j7-oFL"/>
                         <outlet property="view10_11Kg" destination="VKy-Su-r4g" id="gjD-OT-Lj1"/>
                         <outlet property="view12_14Kg" destination="uUm-jO-8oz" id="rGO-8T-AD3"/>
                         <outlet property="view15_18Kg" destination="5re-40-PQn" id="Nos-ag-PUa"/>
@@ -445,13 +460,15 @@
                         <viewLayoutGuide key="safeArea" id="EJH-qy-FBs"/>
                     </view>
                     <connections>
+                        <outlet property="codeByColorText" destination="tdW-rF-a1l" id="YnE-jw-y8s"/>
                         <outlet property="kgSelected" destination="B4b-D2-0Fw" id="glA-DX-XOe"/>
+                        <outlet property="resuscitationText" destination="fmN-EU-T5e" id="HPi-cr-JSW"/>
                         <outlet property="tableView" destination="hQN-yW-ShS" id="ciG-jQ-HSs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j6i-D9-HvA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2860" y="115.59220389805098"/>
+            <point key="canvasLocation" x="2319" y="117"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dc0-TF-KVV">
@@ -470,6 +487,62 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ODu-kw-gBS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="511" y="116"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="J3h-Jq-MCh">
+            <objects>
+                <viewController storyboardIdentifier="termsOfUseViewController" title="Title" id="Ogj-cT-j5s" customClass="TermsViewController" customModule="ePed" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="l2o-6o-gFj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Termos de uso do uso do app" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lbO-IP-gcU">
+                                <rect key="frame" x="74" y="78" width="227" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Esse aplicativo deverá ser utilizado somente como uma ferramenta complementar e somente por profissionais da área" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VCR-2f-wbp">
+                                <rect key="frame" x="16" y="120" width="343" height="71"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="rf7-4e-Qci"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="ePed" id="0TE-TI-1Tu">
+                        <barButtonItem key="rightBarButtonItem" title="OK" id="Fu4-ez-boB">
+                            <connections>
+                                <action selector="okButton:" destination="Ogj-cT-j5s" id="mx5-bc-89R"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jwv-jg-13j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1637.5999999999999" y="890.10494752623697"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="VNF-yo-qs5">
+            <objects>
+                <navigationController storyboardIdentifier="termsNavController" automaticallyAdjustsScrollViewInsets="NO" id="3Ph-PE-Zc2" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hCR-9w-Kfp">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Ogj-cT-j5s" kind="relationship" relationship="rootViewController" id="XLH-zc-iS8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hgR-MB-BzS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="839" y="891"/>
         </scene>
     </scenes>
 </document>

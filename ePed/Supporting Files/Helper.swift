@@ -29,6 +29,10 @@ enum DataLoaderStrings: String {
     case appSubnameText = "Emergência Pediátrica"
     case noUserText = "Entre sem registro"
     case termsText = "Termos de uso"
+    case resuscitationTitle = "Ressucitação Pediátrica"
+    case codedByColorTitle = "Codificada por Cor e Estatura"
+    
+    case sourceText = "Baseado em PALS da American Heart Association 2015 e Broselow"
     
     //Tape codes values strings
     case equipment = "Equipamento"
@@ -66,7 +70,7 @@ enum DataLoaderStrings: String {
     case Blue = "Azul"
     case Orange = "Laranja"
     case Green = "Verde"
-    
+
     var localized: String {
         return self.rawValue.localized()
     }

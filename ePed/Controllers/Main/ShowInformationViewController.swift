@@ -10,23 +10,31 @@ import UIKit
 
 class ShowInformationViewController: UIViewController {
     
-    var scaleSelected: ColorScale?
-    var tapeColor: TapeColorValues?
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var kgSelected: UILabel!
+    @IBOutlet weak var resuscitationText: UILabel!
+    @IBOutlet weak var codeByColorText: UILabel!
+    
+    var scaleSelected: ColorScale?
+    var tapeColor: TapeColorValues?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        getColorValues()
-        
         prepareTableView()
+        getColorValues()
+        prepareLayout()
     }
     
     func prepareTableView(){
         tableView.delegate = self
         tableView.dataSource = self
         //tableView.estimatedRowHeight = 90.0
+    }
+    
+    func prepareLayout(){
+        resuscitationText.text = DataLoaderStrings.resuscitationTitle.localized
+        codeByColorText.text = DataLoaderStrings.codedByColorTitle.localized
+        
     }
     
     func getColorValues()  {

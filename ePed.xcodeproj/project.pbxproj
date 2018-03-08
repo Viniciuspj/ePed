@@ -22,6 +22,7 @@
 		EAF7D77E2041A9FC0049145C /* ShowInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF7D77D2041A9FC0049145C /* ShowInformationViewController.swift */; };
 		EAF7D7812041B0330049145C /* TapeColorValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF7D7802041B0330049145C /* TapeColorValues.swift */; };
 		FB28FA8F20504F3F0052B29D /* GridTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB28FA8E20504F3F0052B29D /* GridTableViewCell.swift */; };
+		FB28FA922051DD3C0052B29D /* TermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB28FA912051DD3C0052B29D /* TermsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		EE0CB46481BCD56FA2749CF1 /* Pods-ePed.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ePed.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ePed/Pods-ePed.debug.xcconfig"; sourceTree = "<group>"; };
 		F3A17FCB6ADF5A5EFF3A5427 /* Pods-ePed.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ePed.release.xcconfig"; path = "Pods/Target Support Files/Pods-ePed/Pods-ePed.release.xcconfig"; sourceTree = "<group>"; };
 		FB28FA8E20504F3F0052B29D /* GridTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridTableViewCell.swift; sourceTree = "<group>"; };
+		FB28FA912051DD3C0052B29D /* TermsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 			children = (
 				EAF7D77B203C3FD40049145C /* MainViewController.swift */,
 				EAF7D77D2041A9FC0049145C /* ShowInformationViewController.swift */,
+				FB28FA912051DD3C0052B29D /* TermsViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -327,6 +330,7 @@
 				EA61AC19202F680E00E01639 /* AppDelegate.swift in Sources */,
 				EA5F52692032228100B6FEF8 /* Helper.swift in Sources */,
 				FB28FA8F20504F3F0052B29D /* GridTableViewCell.swift in Sources */,
+				FB28FA922051DD3C0052B29D /* TermsViewController.swift in Sources */,
 				EAF7D77920331B240049145C /* Extensions.swift in Sources */,
 				EAF7D7812041B0330049145C /* TapeColorValues.swift in Sources */,
 				EAF7D77E2041A9FC0049145C /* ShowInformationViewController.swift in Sources */,

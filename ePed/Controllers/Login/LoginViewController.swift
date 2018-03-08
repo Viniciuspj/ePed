@@ -65,6 +65,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate, GIDSignIn
         button.setTitle(DataLoaderStrings.termsText.localized, for: .normal)
         button.titleLabel!.textAlignment = .center
         button.titleLabel?.font = helper.getAppFont(fontSize: 18)
+        button.addTarget(self, action: #selector(goToTerms), for: .touchUpInside)
         return button
     }()
 
@@ -167,10 +168,17 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate, GIDSignIn
     //No signin button
     @objc func goToMainController(){
         //Redirect to MainPage
-        let MainVc = helper.storyBoardWithName(name: "Main")
-        present(MainVc, animated: true, completion: nil)
+        let mainVC = helper.storyBoardWithName(name: "Main")
+        present(mainVC, animated: true, completion: nil)
     }
     
+    @objc func goToTerms(){
+        let termsVC = helper.storyBoardWithName(name: "Main", storyboardId: "termsNavController")
+        present(termsVC, animated: true, completion: nil)
+        
+        //let navController = UINavigationController(rootViewController: termsVC
+        //self.navigationController?.present(navController, animated: true, completion: nil)
+    }
 }
 
 

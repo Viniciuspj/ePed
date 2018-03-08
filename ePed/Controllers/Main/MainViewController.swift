@@ -19,14 +19,21 @@ class MainViewController: UIViewController {
     @IBOutlet weak var view19_23Kg: UIView!
     @IBOutlet weak var view24_29Kg: UIView!
     @IBOutlet weak var view30_36Kg: UIView!
+    @IBOutlet weak var terms: UIButton!
+    @IBOutlet weak var sourceText: UILabel!
+    @IBOutlet weak var resuscitationText: UILabel!
+    @IBOutlet weak var codedByColorText: UILabel!
     
     var scaleSelected: ColorScale?
     
     override func viewDidLoad() {
-        configureViewsColors()
+        configureLayout()
     }
     
-    func configureViewsColors(){
+    func configureLayout(){
+        resuscitationText.text = DataLoaderStrings.resuscitationTitle.localized
+        codedByColorText.text = DataLoaderStrings.codedByColorTitle.localized
+        
         view3_5kg.backgroundColor = ColorScale.Gray.color
         view6_7Kg.backgroundColor = ColorScale.Pink.color
         view8_9Kg.backgroundColor = ColorScale.Red.color
@@ -39,6 +46,13 @@ class MainViewController: UIViewController {
         
         view15_18Kg.layer.borderColor = UIColor.black.cgColor
         view15_18Kg.layer.borderWidth = 1
+        
+        terms.setTitleColor(AppColors.green.getColor(), for: .normal)
+        terms.setTitle(DataLoaderStrings.termsText.localized, for: .normal)
+        terms.titleLabel!.textAlignment = .center
+        terms.titleLabel?.font = Helper().getAppFont(fontSize: 18)
+        
+        sourceText.text = DataLoaderStrings.sourceText.localized
     }
     
     @IBAction func getWeightValues(_ sender: UITapGestureRecognizer) {
@@ -93,4 +107,7 @@ class MainViewController: UIViewController {
         
     }
     
+    @IBAction func logoutButton(_ sender: UIBarButtonItem) {
+        //TODO
+    }
 }
